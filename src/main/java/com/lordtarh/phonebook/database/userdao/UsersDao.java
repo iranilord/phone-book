@@ -1,11 +1,12 @@
 package com.lordtarh.phonebook.database.userdao;
 
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface UsersDao <T> {
-    public int create(T t);
-    public T update(T t);
-    public boolean delete(int id);
+    public void create(T t) ;
+    public void update(T t);
+    public void delete(int id);
     public List<T> search(String name);
 }

@@ -1,6 +1,8 @@
 package com.lordtarh.phonebook.database;
 
 import com.lordtarh.phonebook.reflections.UsersReflections;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -9,11 +11,12 @@ import java.sql.*;
 import java.util.List;
 import java.util.Properties;
 
+
 public class dbConnections {
     private static Connection connection;
     private static dbConnections dbConnections;
     private String url, username, password;
-
+    private static  Logger LOG = LoggerFactory.getLogger(dbConnections.class);
 
     private dbConnections() {
         readConfig();
@@ -35,7 +38,9 @@ public class dbConnections {
 
     private Connection getConnectiondb() {
         try {
+
             connection = DriverManager.getConnection(url, username, password);
+            LOG.info("Connected To SQL server ! {}",url);
         } catch (SQLException e) {
             e.printStackTrace();
         }
