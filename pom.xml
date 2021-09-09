@@ -51,7 +51,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>main</mainClass>
+                            <mainClass>com.lordtarh.phonebook.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

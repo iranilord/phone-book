@@ -35,10 +35,12 @@ public class Dialogs {
         int selected = mainMenu();
         switch (selected){
             case 1 :
-                    addUser();
+                addUser();
+                menuSelector();
                 break;
             case 2 :
                 searchUsers();
+                menuSelector();
                 break;
 
             case 3:
@@ -104,7 +106,6 @@ public class Dialogs {
             userMapping(usersList);
         }
         scanner.next();
-        menuSelector();
 
     }
 
