@@ -1,10 +1,10 @@
 package com.lordtarh.phonebook;
-import com.lordtarh.phonebook.database.dbConnections;
+
+import com.lordtarh.phonebook.console.Dialogs;
 
 public class Main {
 
     public static void main(String[] args) {
-
-        dbConnections.getConnection();
+        Dialogs.menuSelector();
     }
 }
